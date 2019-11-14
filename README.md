@@ -17,7 +17,7 @@ This project expects you to have a running postgres database running on your sys
 The main repository resides in:
 
 `git.bbaw.de:/git/census/census_api.git`
-
+https://poetry.eustace.io/
 Clone with:
 
 ```console
@@ -56,6 +56,8 @@ SQLALCHEMY_DATABASE_URL = "postgresql://suchmaske@localhost/easydb-census"
 
 The FastAPI doesn't specify what to do when you have multiple schemas in your database. In order for the query builder to work correctly, you have to specify the schema in the according model class. The following line is crucial: `__table_args__ = {"schema": "census"}`.
 
+[This thread on StackOverflow](https://stackoverflow.com/questions/27003515/how-to-specify-postgresql-schema-in-sqlalchemy-column-foreign-key-mixin) proved to be very helpful.
+
 ```python
 # census_api/models.py
 class Document(Base):
@@ -71,8 +73,9 @@ class Document(Base):
 
 ## Swagger / OpenAPI
 
-Access the automatically generated Swagger / OpenAPI specification at: [http://localhost:8000/docs](http://localhost:8000/docs)
+Access the automatically generated [Swagger / OpenAPI](https://swagger.io/) specification at: [http://localhost:8000/docs](http://localhost:8000/docs)
 
 ## Further helpful links
 
 * [FastAPI: SQL databases](https://fastapi.tiangolo.com/tutorial/sql-databases/)
+* [StackOverflow: How to specify PostgreSQL schema in SQLAlchemy column/foreign key mixin?](https://stackoverflow.com/questions/27003515/how-to-specify-postgresql-schema-in-sqlalchemy-column-foreign-key-mixin)
