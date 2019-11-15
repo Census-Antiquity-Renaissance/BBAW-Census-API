@@ -32,6 +32,18 @@ def read_document(document_id: int, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Document not found")
     return db_document
 
+@app.get("/monuments/", response_model=List[schemas.Monument])
+def read_monuments(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
+    monuments = crud.get_monuments(db, skip=skip, limit=limit)
+    return monuments
+
+@app.get("/monument/{monument_id}", response_model=schemas.Monument)
+def read_monument(monument_id: int, db: Session = Depends(get_db)):
+    db_monument = crud.get_monument(db, monument_id=monument_id)
+    if db_monument is None:
+        raise HTTPException(status_code=404, detail="Monument not found")
+    return db_monument
+
 @app.get("/items/{item_id}")
 async def read_item(item_id: int, q: str = None):
     return {"item_id": item_id, "q": q}

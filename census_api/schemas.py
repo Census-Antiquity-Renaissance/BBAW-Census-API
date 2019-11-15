@@ -10,3 +10,18 @@ class Document(DocumentBase):
 
   class Config:
         orm_mode = True
+
+class MonumentBase(BaseModel):
+  comment: str = None
+  details: str = None
+  is_main_monument: str = None
+  label_name: str = None
+  subdivision: str = None
+  variant_name: str = None
+  dimensions: str = None
+
+class Monument(MonumentBase):
+  id: int
+
+  class Config:
+        orm_mode = True
