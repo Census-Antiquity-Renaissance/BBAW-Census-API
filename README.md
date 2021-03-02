@@ -2,7 +2,7 @@
 
 ## About
 
-This project connects to a local database containing the Census database and creates a very, very basic RESTful API for the Census data.
+This project connects to a local database containing the Census database (as provided at http://www.census.de/ in 2019 running in easdb4) and creates a very, very basic RESTful API for the Census data.
 
 This project runs on the [FastAPI framework](https://fastapi.tiangolo.com/) for Python 3.
 
