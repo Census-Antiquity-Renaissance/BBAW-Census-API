@@ -161,12 +161,6 @@ poetry run uvicorn main:app --reload
 9. Open your browser and visit <http://localhost:8000/monuments> to fetch the first 100 monuments.
 10. Open another tab and visit <http://localhost:8000/monument/152707> to fetch a specific monument.
 
-## Creator
-
-© 2018-2020 by Berlin-Brandenburg Academy of Sciences and Humanities
-
-Developed by TELOTA, a DH working group of the Berlin-Brandenburg Academey of Sciences and Humanities http://www.bbaw.de/telota telota@bbaw.de. Developer: Oliver Pohl
-
 ## License
 
 This repository is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
@@ -174,3 +168,9 @@ This repository is free software: you can redistribute it and/or modify it under
 The developers are in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
 See http://www.gnu.org/licenses/.
+
+## Credits
+
+© 2018-2020 by Berlin-Brandenburg Academy of Sciences and Humanities
+
+Developed by TELOTA, a DH working group of the Berlin-Brandenburg Academy of Sciences and Humanities http://www.bbaw.de/telota telota@bbaw.de. Developer: Oliver Pohl
